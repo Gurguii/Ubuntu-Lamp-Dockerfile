@@ -1,0 +1,13 @@
+# WILL MYSQL READ THIS?
+# OR THAT?
+CREATE DATABASE db_name;
+CREATE TABLE db_name.db_table (id INT AUTO_INCREMENT, name varchar(15), mail varchar(30), PRIMARY KEY(id));
+CREATE USER 'db_user'@'%' IDENTIFIED WITH mysql_native_password BY 'db_pass';
+GRANT ALL ON db_name.* TO 'db_user'@'%';
+INSERT into db_name.db_table(name,mail) values('testuser','testuser@lamp.es');
+
+CREATE DATABASE lamp_db;
+CREATE TABLE lamp_db.lamp_tb(id INT AUTO_INCREMENT, name varchar(13), mail varchar(25), PRIMARY KEY(id));
+CREATE USER 'lamp_admin'@'%' IDENTIFIED WITH mysql_native_password BY 'lamp_admin';
+GRANT ALL ON lamp_db.* TO 'lamp_admin'@'%';
+INSERT INTO lamp_db.lamp_tb (name, mail) VALUES ('randomuser1','random@example.com'), ('testuser23','testin@lamp.es'), ('gurgui', 'gurgui@lamp.es');
