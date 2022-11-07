@@ -55,7 +55,16 @@ docker exec -it lamp bash
     
     The **run** command *starts* and *detach* a container *forwarding* default *http/https* ports from host to internal ones.  
 
-    Used entrypoint is a custom script *.startup.sh* which starts mysql and apache2.  
+- Commands used by entrypoint custom script *.startup.sh*:
+  
+    ***start mysql***  
+    ```bash
+    service mysql start
+    ```
+    ***start apache2***  
+    ```bash
+    apache2ctl -D bg
+    ```
 
 ### Custom build info  
 - **.mysql.queries** file contains the queries that will be run when creating the image, by default they create  user **db_user** with password **db_pass**, database **db_name** and table **db_table**.  

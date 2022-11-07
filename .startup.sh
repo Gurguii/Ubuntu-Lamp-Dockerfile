@@ -1,3 +1,3 @@
 #!/bin/bash
 service mysql start
-apache2ctl -D FOREGROUND
+apache2ctl -D bg
